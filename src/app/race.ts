@@ -6,5 +6,7 @@ export class Race {
     id: number;
     name: string;
     closing_time: string;
+    competitors: string[];
+    desc: string;
 
 }

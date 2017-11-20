@@ -9,7 +9,9 @@ import { Race } from '../race';
 })
 export class RacesComponent implements OnInit {
 
-  races: Race[];
+    private title = 'Upcoming Races';
+    races: Race[];
+    selectedRace: Race;
 
   constructor(private http: HttpClient) { }
 
@@ -18,9 +20,10 @@ export class RacesComponent implements OnInit {
     // load the first 5 races
     this.http.get('http://localhost:8888/next-5/public/api/races').subscribe(
         data => {
-          console.log(data);
+          //console.log(data);
           this.races = data['response']; // need to update the parameter
         });
   }
+
 
 }

@@ -1,0 +1,13 @@
+.races li {
+    float: left;
+    width: 20%;
+    margin: 5px;
+    list-style: none;
+    display: block;
+    background-color: #dedede;
+    padding: 5px;
+    border-radius: 10px;
+}
+.races li:hover {
+    cursor: pointer;
+}

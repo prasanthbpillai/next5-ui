@@ -5,16 +5,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RacesComponent } from './races/races.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { RaceDetailComponent } from './race-detail/race-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RacesComponent
+    RacesComponent,
+    RaceDetailComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

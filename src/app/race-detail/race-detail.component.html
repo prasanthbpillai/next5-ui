@@ -1,0 +1,11 @@
+
+<div *ngIf="race">
+
+  <h1>{{ race.name }}</h1>
+  <ul>
+    <li *ngFor="let competitor of race.competitors">
+      {{ competitor.position }} {{ competitor.name }}
+    </li>
+  </ul>
+
+</div>

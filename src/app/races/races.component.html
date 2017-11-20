@@ -1,7 +1,14 @@
+<div style="text-align:center">
+    <h1>
+        {{title}}
+    </h1>
+</div>
+
 <ul class="races">
-  <li *ngFor="let race of races">
-     {{race.name}}
+  <a *ngFor="let race of races" routerLink="/detail/{{race.id}}">
+   <li>  {{race.name}}
     <br />
     {{race.closing_time}}
-  </li>
+   </li>
+  </a>
 </ul>
