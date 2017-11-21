@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Race} from "../race";
+import {Meeting} from "../Meeting";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
 
@@ -12,6 +13,8 @@ export class RaceDetailComponent implements OnInit {
 
   private race: Race;
   private raceId;
+  private meeting: Meeting;
+
 
   constructor(
       private http: HttpClient,
@@ -24,8 +27,9 @@ export class RaceDetailComponent implements OnInit {
 
     this.http.get('http://localhost:8888/next-5/public/api/race/'+ this.raceId).subscribe(
         data => {
-         console.log(this.raceId);
+
           this.race = data['response'];
+          this.meeting = data['response']['meeting'];
         });
   }
 

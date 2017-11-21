@@ -11,7 +11,6 @@ export class RacesComponent implements OnInit {
 
     private title = 'Upcoming Races';
     races: Race[];
-    selectedRace: Race;
 
   constructor(private http: HttpClient) { }
 

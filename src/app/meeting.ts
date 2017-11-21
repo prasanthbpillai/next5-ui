@@ -2,12 +2,11 @@
  * Created by prasanthpillai on 19/11/17.
  */
 
-export class Race {
+export class Meeting {
     id: number;
     name: string;
-    closing_time: string;
-    competitors: string[];
     desc: string;
-
+    start_date: string;
+    end_date: string;
 
 }

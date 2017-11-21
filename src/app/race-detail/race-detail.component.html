@@ -2,10 +2,27 @@
 <div *ngIf="race">
 
   <h1>{{ race.name }}</h1>
-  <ul>
-    <li *ngFor="let competitor of race.competitors">
-      {{ competitor.position }} {{ competitor.name }}
-    </li>
-  </ul>
+  <p>{{race.desc}}</p>
 
+  <div>
+    <strong>Meeting:</strong> {{meeting.name}}<br/>
+    {{meeting.desc}}
+  </div>
+  <table width="100%">
+    <thead>
+      <tr>
+        <th width="20%">Position</th>
+        <th width="80%">Competitor</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let competitor of race.competitors">
+        <td>{{ competitor.pivot.position }} </td>
+        <td>{{ competitor.name }} <br/>
+              {{ competitor.description }}</td>
+
+      </tr>
+    </tbody>
+  </table>
 </div>

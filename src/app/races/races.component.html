@@ -2,13 +2,15 @@
     <h1>
         {{title}}
     </h1>
+
 </div>
+
 
 <ul class="races">
   <a *ngFor="let race of races" routerLink="/detail/{{race.id}}">
    <li>  {{race.name}}
     <br />
-    {{race.closing_time}}
+    {{race.closing_time | date:"dd/MM/yyyy 'at' h:mm a"}}
    </li>
   </a>
 </ul>
