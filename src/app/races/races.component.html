@@ -10,7 +10,8 @@
   <a *ngFor="let race of races" routerLink="/detail/{{race.id}}">
    <li>  {{race.name}}
     <br />
-    {{race.closing_time | date:"dd/MM/yyyy 'at' h:mm a"}}
+    {{race.closing_time | date:"dd/MM/yyyy 'at' h:mm a"}} <br /><br/>
+       <button>Place the bets</button>
    </li>
   </a>
 </ul>
